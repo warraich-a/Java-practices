@@ -10,11 +10,10 @@ public class DiceRoller {
         int numOfDice;
         int total = 0;
 
-        String playAgain = "yes";
-
-        do {
+        while(true) {
             System.out.print("Enter the # of dice to roll: ");
             numOfDice = scanner.nextInt();
+            scanner.nextLine();
 
             if (numOfDice > 0) {
                 for (int i = 0; i < numOfDice; i++) {
@@ -28,10 +27,11 @@ public class DiceRoller {
                 System.out.println("number of dice must be greater than 0");
             }
 
-            System.out.println("Play again? ");
-            playAgain = scanner.nextLine();
-
-        } while (playAgain.equals("yes"));
+            System.out.print("Play again? ");
+            if (!scanner.nextLine().trim().equalsIgnoreCase("yes")) {
+                break;
+            }
+        }
 
         System.out.println("Game over");
 
