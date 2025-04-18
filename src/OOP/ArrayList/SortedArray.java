@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class Array_list {
+public class SortedArray {
 
     public static void main(String[] args) {
 
@@ -103,7 +103,7 @@ public class Array_list {
         }
 
         // ------------------------------------------------------------------
-        // SORT OPTION 4: Sort by color, then by name
+        // SORT OPTION 4: Sort by Name, then by color
         // ------------------------------------------------------------------
 
         // This is useful when two fruits have the same name

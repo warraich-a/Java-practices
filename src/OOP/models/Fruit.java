@@ -46,5 +46,9 @@ public class Fruit implements Comparable<Fruit> {
         // Step 4: Compare relevant fields (name and color)
         return this.name.equals(other.name) && this.color.equals(other.color);
     }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(name, color);
+    }
 
 }
